@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffe Nongki</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#"><img src="logo2.png" class="logo"></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">what's New</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+              <h2>It's not just Coffe<br>It's <span>Coffe Nongki</span></h2> 
+              <p>Coffe Nongki is the fastest growing non-franchise coffee chain in Indonesia.The idea of Coffe Nongki started because the founders have the mission to spread their passion for Indonesian coffee.</p>
+              <a href="#">Learn More</a>
+            </div>
+            <div class="imgBox">
+                <img src="kp.png" class="coffe">
+            </div>                      
+        </div>
+        <ul class="thumb">
+            <li><img src="2new.png" onclick="imgSlider('kp.png');changeCircleColor('#D2691E')"></li>
+            <li><img src="1new.png" onclick="imgSlider('lattenew.png');changeCircleColor('#FFE4B5')"></li>
+            <li><img src="3new.png" onclick="imgSlider('icenew.png');changeCircleColor('#D2B48C')"></li>
+        </ul>
+    </section>   
+
+    <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.coffe').src = anything;
+        }
+
+        function changeCircleColor(color){
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+    </script>
+</body>
+</html>
